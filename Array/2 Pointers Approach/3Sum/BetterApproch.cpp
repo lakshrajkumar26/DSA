@@ -5,7 +5,7 @@
 using namespace std;
 
 // find where a+b+c=0;
-where ith != jth != kth
+// where ith != jth != kth
 
     class Solution
 {
