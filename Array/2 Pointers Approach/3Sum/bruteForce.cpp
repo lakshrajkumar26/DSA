@@ -46,14 +46,15 @@ public:
 
                         // Also set keeps elements sorted automatically.
                         
-                        //Temporary store Triplet
-                        vector<int>triplet = { nums[i] , nums[j] ,nums[k] };
-                        sort(triplet.begin(),triplet.end());
-                        //not found duplicate
-                        if(s.find(triplet) == s.end() ) {
+                        vector<int> triplet = {nums[i] , nums[j] , nums[k]};
+                         
+                        sort(triplet.begin(), triplet.end());
 
+                        if(s.find(triplet) == s.end()) {
                             s.insert(triplet);
-                            ans.push_back(triplet);
+                            ans.push_back(triplet)
+                        }
+
                         }
 
                     }
