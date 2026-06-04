@@ -14,6 +14,8 @@ public:
     {
        
 
+         vector<vector<int>> ans;
+        
         sort(nums.begin(),nums.end());
 
         int n = nums.size();
@@ -21,7 +23,7 @@ public:
         for (int i = 0; i < n; i++) {
 
             if (i > 0 && nums[i] == nums[i - 1]) {
-                continue; //  check  why 
+                continue; //  check and continue that loop
             }
             int j = i + 1;
             int k = n - 1;
@@ -41,15 +43,18 @@ public:
                     k--;
 
                     while (j < k && nums[j] == nums[j - 1]) {
-                        j++;
+                        j++;    // for left side 11111
                     } // check why 
+                      
+                     while (j < k && nums[k] == nums[k + 1]) {
+                        k--;   //for right side 2222
+                    } // check why      {without this loop also can work but jsut to be more optimised}
                     
                 }
             }
         }
 
         return ans;
-
         
     }
 };

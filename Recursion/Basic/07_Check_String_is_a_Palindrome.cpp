@@ -2,23 +2,28 @@
 #include <iostream>
 using namespace std;
 
-// always remember when  function return type then use return to call resursion 
-// only in void no need 
-bool checkPalindrome(string s,int start ,int end ){
 
-    if(start >= end) { 
-        return true;
-    }
-    if(s[start] != s[end]){
-        return false;
+bool checkPalindrome(string s , int start , int end){
+    
+    if (start >= end){
+       return true;   
     }
     
- return checkPalindrome(s,start+1,end-1);
+    if(s[start] != s[end]) return false;
+   
+             
+    return checkPalindrome(s,start+1,end-1);
+    
+    
+    
+    
 }
 
 
+
+
 int main() {
-    string s = "lakal";
+    string s = "laakkaal";
     int n = s.length();
     
     if(checkPalindrome(s,0,n-1)){
